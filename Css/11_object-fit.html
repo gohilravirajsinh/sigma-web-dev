@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Fit and position</title>
+    <style>
+        .container {
+            height: 54vh;
+            width: 58vw;
+            border: 2px solid black;
+        }
+
+        img {
+            height: 54vh;
+            width: 58vw;
+            /* object-fit: cover; */
+            object-fit: contain;
+            /* object-fit: scale-down; */
+            object-position: right bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://www.bmw-infinitycars.in/sites/default/files/2024-11/1680x756_0%20%281%29_0.jpg" alt="">
+    </div>
+</body>
+
+</html>

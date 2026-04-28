@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 80vh;
+            border: 2px solid black;
+            display: grid;
+            /* grid-template-columns: [pehla] 120px [dusra] 100px [tisriLine];
+            grid-template-rows: 100px 100px; */
+            grid-template-columns: 1fr 2fr 0.8fr;
+            gap: 14px 30px;
+            justify-items: center;
+        }
+
+        .item {
+            border: 2px solid red;
+            height: 45px;
+            width: 55px;
+        }
+
+        /* .item-4 {
+            grid-row: 1/2;
+            grid-column: pehla/tisriLine;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item-4">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+
+</html>

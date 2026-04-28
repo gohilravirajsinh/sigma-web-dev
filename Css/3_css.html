@@ -1,0 +1,93 @@
+<!-- variable, mediaQueries, CSS Selector -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Learning 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --text-color: #598234;
+            --primary-color: #216799;
+            --display: flex;
+        }
+
+        li:first-child {
+            color: var(--text-color);
+        }
+
+        li:last-child {
+            color: var(--primary-color)
+        }
+
+        li:nth-child(3)::first-letter {
+            font-size: 32px;
+        }
+
+        ul.variable {
+            display: var(--display);
+        }
+
+        ul.variable li {
+            margin: 20px;
+            display: inline;
+        }
+
+        ul.media li {
+            border: 2px solid black;
+            padding: 30px;
+            margin: 35px;
+            display: flow-root;
+        }
+
+        @media (min-width: 600px) {
+            ul.media li {
+                background-color: brown;
+            }
+        }
+
+        @media (max-width: 599px) {
+            ul.media li {
+                background-color: chartreuse;
+            }
+        }
+
+        @media (orientation: landscape) {
+            body {
+                background-color: rgb(45, 214, 166);
+            }
+        }
+
+        @media (orientation: portrait) {
+            body {
+                background-color: rgb(41, 146, 43);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul class="variable">
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+        </ul>
+    </div>
+
+    <div>
+        <ul class="media">
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

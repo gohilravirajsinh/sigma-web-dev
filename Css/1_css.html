@@ -1,0 +1,192 @@
+<!-- BoxModel, Units, DisplayProperty, Shadow-outline-inline, list-style position:inside type-emoji-image -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css BoxModel</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            font-size: 12px;
+        }
+
+        .box {
+            background-color: aqua;
+        }
+
+        /* Box Model */
+        .box1 {
+            color: blue;
+            padding: 10px;
+            margin: 5px;
+            border: 5px solid black;
+            /* height: 200px; */
+            box-sizing: border-box;
+        }
+
+        .box2 {
+            color: brown;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .units {
+            border: 2px solid black;
+            /* width: 1534px; */
+            width: 70vw;
+            height: 10vh;
+            box-sizing: border-box;
+            margin: auto;
+            background-color: aqua;
+        }
+
+        .container {
+            border: 2px solid black;
+            /* width: 1534px; */
+            width: 80vw;
+            height: 30vh;
+            box-sizing: border-box;
+            margin: 24px auto;
+            font-size: 18px;
+            background-color: aqua;
+        }
+
+        .container p {
+            font-size: 2rem;
+        }
+
+        .myCon {
+            /* width: 100vmin; */
+            width: 90vw;
+            min-height: 20vw;
+            margin: 23px auto;
+            box-sizing: border-box;
+            border: 2px solid black;
+            color: rgb(47, 47, 11);
+            font-size: 22px;
+
+        }
+
+        .inline {
+            border: 2px solid blue;
+            /* display: inline; */
+            width: 300px;
+            /* without inline-block width is not running */
+            display: inline-block;
+            padding: 30px;
+            margin: 30px;
+        }
+
+        .firstInlineDiv {
+            /* display: none; */
+            /* visibility: hidden; */
+            color: #878388;
+        }
+
+        .shadow {
+            border: 2px solid black;
+            padding: 24px;
+            margin: 20px;
+            box-shadow: 5px 15px 5px #878388;
+        }
+
+        .inline-shadow {
+            box-shadow: inset 0px -20px 7px 0px #878388;
+        }
+
+        div p.text-shadow {
+            text-shadow: 15px -25px 1px #783434;
+        }
+
+        nav ul li {
+            /* list-style: devanagari; */
+            /* list-style-type: "💀"; */
+            /* background-color: #878388; */
+            /* list-style-position: inside; */
+            /* border: 2px solid orange; */
+            /* list-style-image: url("/shared-assets/images/examples/rocket.svg"); */
+            list-style: none;
+            display: inline-flex;
+            margin: 20px;
+        }
+
+        .overflow {
+            border: 2px solid black;
+            width: 82vw;
+            height: 13vh;
+            /* overflow: auto; */
+            /* overflow-x: scroll;
+            overflow-y: hidden; */
+            overflow: hidden auto;
+            /* white-space: nowrap; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Box Model -->
+    <div class="box box1">I am a Box</div>
+    <div class="box box2">I am another Box</div>
+
+    <!-- <p>Units</p> -->
+    <div class="units">This is Unit Showing Box</div>
+    <div class="container">
+        <p>
+            perspiciatis natus ut alias, voluptate exercitationem modi, tenetur nostrum sequi ea itaque cumque officiis
+            qui
+        </p>
+    </div>
+    <div class="myCon">
+        <!-- if we add more text than it automatically expend height check css -->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id unde magni perferendis, nam, adipisci sequi fugit ut
+        impedit at eveniet vitae nobis est sint, dicta illo debitis doloribus harum. Esse aspernatur laborum nihil nemo!
+    </div>
+
+    <!-- Properties of Display -->
+    <div class="inline firstInlineDiv">
+        Div Outline Properties
+    </div>
+    <div class="inline"> - Second div convert into inline Properties</div>
+    <span>Span Inline Properties</span>
+    <span>Span 2 Inline Example </span>
+
+    <!-- Shadow Inline Outline & Text-shadow -->
+    <div class="shadow inline-shadow">
+        Shadow Outline Inline here
+        <p class="text-shadow">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet corrupti esse nulla! Suscipit veritatis
+            sunt dolore, corporis quibusdam perferendis velit fuga. Veritatis, facere?
+        </p>
+    </div>
+
+    <!-- List Style -->
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+
+    <!-- overflow Property -->
+    <div class="overflow">
+        This is Overflow Example with explaination of Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+        nisi quas mollitia quod, at magnam error aliquam repellat vero ducimus eum facere deleniti! Lorem ipsum, dolor
+        sit amet consectetur adipisicing elit. Magnam tempora eligendi nam eos aut assumenda laudantium fuga nulla
+        repudiandae autem. Omnis, mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis aut ab
+        repudiandae, consequatur culpa magni voluptates quis cupiditate perferendis quam quidem explicabo ad rem error,
+        officia expedita at earum sed magnam minus. Minima quam eveniet porro maxime nihil pariatur vero obcaecati. Sint
+        numquam deleniti minus.voluptates quis cupiditate perferendis quam quidem explicabo ad rem error,
+        officia expedita at earum sed magnam minus. Minima quam eveniet porro maxime nihil pariatur vero obcaecati. Sint
+        numquam deleniti minus.
+    </div>
+</body>
+
+</html>

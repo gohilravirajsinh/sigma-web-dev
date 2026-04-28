@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation In Css</title>
+    <style>
+        .container {
+            background-color: aqua;
+            height: 81vh;
+            width: 77vw;
+            /* animation-name: rotate;
+            animation-duration: 0.50s;
+            animation-iteration-count: infinite;
+            animation-play-state: paused;
+            animation-direction: alternate; */
+            animation: rotate 2s ease-in-out 1s infinite alternate paused;
+        }
+
+        .box {
+            height: 40px;
+            width: 45px;
+            /* animation-name: SlideKaAnimation;
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+            animation-direction: alternate; */
+            animation: rotate 0.01s ease-in-out 1s infinite alternate,
+                SlideKaAnimation 1s infinite forwards;
+
+        }
+
+        .container:hover {
+            animation-play-state: running;
+        }
+
+        @keyframes SlideKaAnimation {
+            from {
+                background-color: rgb(111, 160, 95);
+            }
+
+            to {
+                transform: translateX(500px);
+                background-color: blue;
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div><br>
+        <div class="box"></div><br>
+        <div class="box"></div><br>
+        <div class="box"></div><br>
+        <div class="box"></div><br>
+        <div class="box"></div><br>
+        <div class="box"></div><br>
+        <div class="box"></div><br>
+        <div class="box"></div><br>
+        <div class="box"></div><br>
+    </div>
+</body>
+
+</html>

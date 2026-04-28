@@ -1,0 +1,82 @@
+<!-- position-relative-absolute-fixed-sticky -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            height: 133px;
+            width: 80vw;
+            padding: 3px;
+            margin: 3px;
+            border: 2px solid black;
+        }
+
+        .box1 {
+            background-color: blueviolet;
+            /* position: sticky;
+            top: 0px;
+            height: 111px;
+            width: 100%;
+            margin: 0;
+            padding: 0; */
+            position: absolute;
+            top: 0px;
+            left: 3px;
+        }
+
+        .box2 {
+            background-color: brown;
+            /* top: -100px;
+            left: 50px;
+            position: relative; */
+
+        }
+
+        .box3 {
+            background-color: chocolate;
+            /* position: fixed; 
+            bottom: 0px;
+            left: 10vw;
+            height: 114px; */
+
+        }
+
+        .box4 {
+            background-color: blue;
+            /* position: absolute; */
+
+        }
+
+        .parent {
+            /* teansform filter or perspective can also make an element appear as positioned */
+            padding: 40px;
+            margin: 30px;
+            border: 2px solid orange;
+            /* position: relative; */
+
+
+            /* Exception: transform: translate(0); */
+            /* filter: invert(); */
+            /* perspective: 0em; */
+            /*this 4 properties are in parent than child are working through parents*/
+        }
+    </style>
+</head>
+
+<body class="parent">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+</body>
+
+</html>
